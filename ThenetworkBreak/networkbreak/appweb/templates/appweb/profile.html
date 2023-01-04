@@ -1,0 +1,155 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="ModelNetwork | Concurso de nuestros modelos | ModelNetwoek GO Dubai">
+    <meta name="keywords" content="thebreaknetwork, Network, Dubai, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./img/logonet.png" />
+    <title>Profile Model | ModelNetwork</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles Lee Primero-->
+
+    <link rel="stylesheet" href="{% static 'appweb/css/themify-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'appweb/css/owl.carousel.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'appweb/css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'appweb/css/slicknav.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'appweb/css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'appweb/css/style.css' %}" type="text/css">
+</head>
+{%csrf_token%}
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-2">
+                    <div class="logo">
+                        <a href="{% url 'index' %}">
+                            <img src="{% static 'appweb/img/logonet.png' %}" alt="" width="100" style="align-items: center ;">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-10 col-md-10">
+                    <div class="main-menu mobile-menu">
+                        <ul>
+                            <li><a href="javascript: history.go(-1)">Back</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+
+    <section class="about-us-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="as-pic">
+                        <img src="{{modelo.fotos.url}}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="as-text">
+                        
+                        <div class="section-title">
+                            <h2>{{modelo.nombre}}</h2>
+                        </div>
+                        <p class="f-para">Soy el modelnetwork mas cotizado y apreciado de todo este chuzo, 100% arepa paisa full gym de calle con mis panas </p>
+                            <div class="footer-option">
+                                <div class="fo-social-perfil">
+                                    <a href="{{modelo.pagTransmision}}"><i class="fa-solid fa-satellite-dish"></i></a>
+                                    <p class="pagt">Pagina de transmision</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section Begin -->
+        <div class="blog-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <span></span>
+                            <br>
+                            <h2>MODEL GALLERY TOP#?</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        {% for p in photos %}
+                      <li data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}" class="{% if forloop.counter0 == 0 %} active {% endif %}"></li>
+                        {% endfor %}
+                    </ol>
+                    <div class="carousel-inner">
+                        {% for p in photos%}
+                      <div class="carousel-item {% if forloop.counter0 == 0 %} active {% endif %}">
+                        <img class="d-block w-100" src="{{p.fotos.url}}" alt="First slide">
+                      </div>
+                        {% endfor %}
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+
+            </div>
+        </div>
+
+    <!-- Footer Section Begin -->
+    <section class="footer-section">
+        <div class="copyright-text"><p>
+            <i class="" aria-hidden="true"></i> <a href="https://www.adgforce.com" target="_blank">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by ADG FORCE</a>
+            </p></div>
+        </div>
+    </section>
+    <!-- Footer Section End -->
+
+    
+    <!-- Back to top button -->
+    <button
+            type="button"
+            class="mt-social"
+            id="btn-back-to-top"
+            >
+    <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <!-- Js Plugins -->
+    <script src="https://kit.fontawesome.com/c91be6c069.js" crossorigin="anonymous"></script>
+    <script src="{% static 'appweb/js/jquery-3.3.1.js' %}"></script>
+    <script src="{% static 'appweb/js/bootstrap.js' %}"></script>
+    <script src="{% static 'appweb/js/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static 'appweb/js/mixitup.js' %}"></script>
+    <script src="{% static 'appweb/js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'appweb/js/owl.carousel.js' %}"></script>
+    <script src="{% static 'appweb/js/main.js' %}"></script>
+
+</body>
+
+</html>

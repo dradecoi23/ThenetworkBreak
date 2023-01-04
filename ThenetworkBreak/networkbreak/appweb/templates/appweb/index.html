@@ -1,0 +1,180 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="ModelNetwork | Concurso de nuestras mas preciadas modelos todo sobre un viaje a Dubai">
+    <meta name="keywords" content="thebreaknetwork, Network, Dubai, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./img/logonet.png" />
+    <title>Home | ModelNetwork</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'appweb/css/themify-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'appweb/css/owl.carousel.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'appweb/css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'appweb/css/slicknav.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'appweb/css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'appweb/css/style.css' %}" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-2 logo">
+                    <a href="#">
+                        <img class="img-logo" src="{% static 'appweb/img/logonet.png' %}" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-10 col-md-10">
+                    <div class="main-menu mobile-menu">
+                        <ul>
+                            <li>
+                                <a href="{% url 'womenmodel' %}">Model Women TOP</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'menmodel' %}">Model Men TOP</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'allmodeltop30' %}">all model</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero-section set-bg"data-setbg="{% static 'appweb/img/dubai11.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="hs-text">
+                        <h2>MODEL NETWORK TRAVELER TO DUBAI</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Blog Section Begin -->
+    <div class="blog-section latest-blog spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>TOP MODELSNETWORK #1</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="blog-item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                {% for p in Top1men %}
+                                <div class="bi-pic set-bg" data-setbg="{{ p.fotos.url}}">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="bi-text">
+                                    <h4><a href="menmodel.html">{{p.nombre}} es nuestro Boy TOP#1 ModelNetwork</a></h4>
+                                    <p>Never ever think of giving up. Winners never quit and</p>
+                                    <a href="{% url 'menmodel' %}" class="primary-btn">Mas Informacion</a>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="blog-item">
+                        <div class="row">
+                            <div class="col-lg-6">
+
+                                {% for p in Top1Women %}
+                                <div class="bi-pic set-bg" data-setbg="{{ p.fotos.url}}">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="bi-text">
+                                    <h4><a href="womenmodel.html">{{p.nombre}} es nuestra Girl TOP#1 ModelNetwork</a></h4>
+                                    <p>Never ever think of giving up. Winners never quit and</p>
+                                    <a href="{% url 'womenmodel' %}" class="primary-btn">Mas Informacion</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Section End -->
+ 
+
+    <!-- Footer Section Begin -->
+    <section class="footer-section">
+        <div class="copyright-text"><p>
+            <i class="" aria-hidden="true"></i> <a href="https://www.adgforce.com" target="_blank">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by ADG FORCE</a>
+            </p></div>
+        </div>
+        <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFNpAnSFJo&#x2F;watch?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFNpAnSFJo&#x2F;watch?utm_content=DAFNpAnSFJo&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Diseño</a> de adgforce ceo
+        <div class="copyright-text"><p>
+            {% if user.is_authenticated %}
+            <i class="" aria-hidden="true"></i><a href="{% url 'logout' %}" class="" >Cerrar sesion</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="" aria-hidden="true"></i><a href="{% url 'tableform' %}" class="" >Tabla</a>
+            {% else %}
+            <i class="" aria-hidden="true"></i><a href="{% url 'login' %}" >Iniciar sesion</a>
+            {%endif%}
+            </p></div>
+        </div>
+    </section>
+    <!-- Footer Section End -->
+    
+    <!-- Js Plugins -->
+    <script src="https://kit.fontawesome.com/c91be6c069.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="{% static 'appweb/js/jquery-3.3.1.js' %}"></script>
+    <script src="{% static 'appweb/js/bootstrap.js' %}"></script>
+    <script src="{% static 'appweb/js/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static 'appweb/js/mixitup.js' %}"></script>
+    <script src="{% static 'appweb/js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'appweb/js/owl.carousel.js' %}"></script>
+    <script src="{% static 'appweb/js/main.js' %}"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    </body>
+
+</html>

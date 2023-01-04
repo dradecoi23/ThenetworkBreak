@@ -1,0 +1,41 @@
+<table class="table text-center">
+    <tr>
+        <th scope="col">NickName</th>
+        <th scope="col">Instagram</th>
+        <th scope="col">Onlyfans</th>
+        <th scope="col">Pagina de Transmisión</th>
+        <th scope="col">concursante</th>
+        <th scope="col">valor</th>
+        <th scope="col">genero</th>
+        <th scope="col">Opciones</th>
+
+    </tr>
+
+    {% for p in modelos %}
+    <tr>
+        <td>{{ p.nombre |title}}</td>
+        <td>{{ p.instagram |title}}</td>
+        <td>{{ p.onliFans |title}}</td>
+        <td>{{ p.pagTransmision |title}}</td>
+        <td>{%if p.concursante %}
+            SI
+            {% else %}
+            NO
+            {% endif %}
+        </td>
+        <td>{{ p.valor |title}}</td>
+        <td>{{ p.genero |title}}</td>
+        <td>
+            <a href="{% url 'editarModelo' p.id %}" class"site-btn ">Editar</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="{% url 'eliminarModelo' p.id %}" class"btn btn-danger ">Eliminar</a>
+        </td>
+
+
+    </tr>
+
+
+
+    {%endfor%}
+</table>
+

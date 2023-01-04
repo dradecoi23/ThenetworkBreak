@@ -1,0 +1,25 @@
+{% load crispy_forms_tags %}
+
+<div class="spad modal fade" id="formularioModal" tabindex="-1" role="dialog" aria-labelledby="formularioModalLabel"aria-hidden="true">
+
+    <div class="row modal-dialog" role="document">
+    </div>
+        <div class="col-lg-6 card">
+            <div class="contact-option">
+                <div class="">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="">Nuevo Modelo</h4>
+                </div>
+                <form action="" method="post" class="comment-form contact-form" enctype="multipart/form-data">
+                    {%csrf_token%}
+                    {{form | crispy}}
+                    {{formfoto | crispy}}
+                    <div class="d-flex justify-content-center">
+                        <input type="submit" value="Guardar" Class="site-btn">
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>

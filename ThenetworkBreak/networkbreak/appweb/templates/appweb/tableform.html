@@ -1,0 +1,83 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="ModelNetwork | Concurso de nuestras mas preciadas modelos todo sobre un viaje a Dubai">
+    <meta name="keywords" content="thebreaknetwork, Network, Dubai, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./img/logonet.png" />
+    <title>Home | ModelNetwork</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+
+    <link rel="stylesheet" href="{% static 'appweb/css/themify-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'appweb/css/owl.carousel.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'appweb/css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'appweb/css/slicknav.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'appweb/css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'appweb/css/style.css' %}" type="text/css">
+</head>
+
+{%include "appweb/formulario.html"%}
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+    <header class="header-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-2">
+                    <div class="logo">
+                        <a href="{% url 'index' %}">
+                            <img src="{% static 'appweb/img/logonet.png' %}" alt="" width="100" style="align-items: center ;">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-10 col-md-10">
+                    <div class="main-menu mobile-menu">
+                        <ul>
+                            <li><a href="{% url 'index' %}">Back</a></li>
+                            <li><i class="" aria-hidden="true"></i><a href="" class="" data-toggle="modal" data-target="#formularioModal">+Models</a></li>
+                            <li><i class="" aria-hidden="true"></i><a href="{% url 'actualizar' %} " class="" >Actualizar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    
+    {%include "appweb/tablamodels.html"%}
+    
+
+    <!-- Footer Section Begin -->
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+            </div>
+            <div class="copyright-text"></div>
+        </div>
+    </section>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="https://kit.fontawesome.com/c91be6c069.js" crossorigin="anonymous"></script>
+    <script src="{% static 'appweb/js/jquery-3.3.1.js' %}"></script>
+    <script src="{% static 'appweb/js/bootstrap.js' %}"></script>
+    <script src="{% static 'appweb/js/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static 'appweb/js/mixitup.js' %}"></script>
+    <script src="{% static 'appweb/js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'appweb/js/owl.carousel.js' %}"></script>
+    <script src="{% static 'appweb/js/main.js' %}"></script>
+</body>
+
+</html>
